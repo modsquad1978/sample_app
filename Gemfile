@@ -8,6 +8,17 @@ gem 'rails', '3.2.1'
 gem 'sqlite3'
 gem 'gravatar_image_tag', '1.0.0.pre2'
 gem 'will_paginate'
+gem 'actionmailer'
+gem 'actionpack'
+gem 'activerecord'
+gem 'activesupport'
+gem 'fastthread'
+gem 'passenger'
+gem 'fog'
+
+group :production, :staging do
+	gem 'pg'
+end
 
 group :development do
 	gem 'rspec-rails', '2.8.0'
@@ -31,7 +42,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer'
+  gem 'therubyracer'
 
   gem 'uglifier', '>= 1.0.3'
 end
