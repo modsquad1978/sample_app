@@ -1,4 +1,6 @@
 AxiosApp::Application.routes.draw do
+  get "contacts/new"
+
 	resources :users do
 		member do
 			get :following, :followers

@@ -11,7 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120225143546) do
+ActiveRecord::Schema.define(:version => 20120301183342) do
+
+  create_table "contacts", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "work_phone"
+    t.string   "mobile_phone"
+    t.string   "company"
+    t.string   "address_1"
+    t.string   "address_2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "linkedin"
+    t.string   "facebook"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "contacts", ["email"], :name => "index_contacts_on_email", :unique => true
 
   create_table "microposts", :force => true do |t|
     t.string   "content"
