@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-SampleApp::Application.load_tasks
+AxiosApp::Application.load_tasks
