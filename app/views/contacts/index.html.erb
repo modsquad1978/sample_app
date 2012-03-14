@@ -1,0 +1,8 @@
+<h1>All Contacts</h1>
+<p><%= link_to "New Contact", contacts_new_path, :class => "new_button round" %></p>
+<%= will_paginate %>
+<ul class="contacts">
+  <div><%= render @contacts %></div>
+</ul>
+
+<%= will_paginate %>

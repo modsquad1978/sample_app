@@ -1,0 +1,9 @@
+<li>
+	<%= link_to contact.first_name, contact %> <%= link_to contact.last_name, contact %>
+	
+	<%= contact.email %> <%= contact.work_phone %>
+	<% if current_user.admin? %>
+	|	<%= link_to "delete", contact, :method => :delete, :confirm => "You sure?", 
+									:title => "Delete #{contact.first_name}" %>
+	<% end %>
+</li>

@@ -1,0 +1,19 @@
+<table class="profile" summary="Profile information">
+	<tr>
+		<td class="main">
+			<h1>
+				<%= @contacts.first_name%> <%= @contacts.last_name %>
+			</h1>
+				<div><strong>Email:</strong> <%= @contacts.email %></div>
+				<div><strong>Work Phone:</strong> <%= @contacts.work_phone %></div>
+				<div><strong>Mobile Phone:</strong> <%= @contacts.mobile_phone %></div>
+				<div><strong>Address 1:</strong> <%= @contacts.address_1 %></div>
+				<div><strong>Address 2:</strong> <%= @contacts.address_2 %></div>
+				<div><strong>City:</strong> <%= @contacts.city %></div>
+				<div><strong>State:</strong> <%= @contacts.state %></div>
+				<div><strong>LinkedIn:</strong> <%= @contacts.linkedin %></div>
+				<div><strong>Facebook:</strong> <%= @contacts.facebook %></div>
+		</td>
+	</tr>
+</table>
+<td><%= link_to 'Edit Contact', edit_contact_path(@contact) %></td>
