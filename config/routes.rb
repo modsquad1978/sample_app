@@ -1,5 +1,7 @@
 AxiosApp::Application.routes.draw do
 	
+  resources :projects
+
   resources :resources
 
 	resources :users do
@@ -8,9 +10,12 @@ AxiosApp::Application.routes.draw do
 		end
 	end
 	
+	#need to add the resources to projects relationship.
+	
   get "sessions/new"
 	get "contacts/new"
 	get "resources/new"
+	get "projects/new"
 
   resources :users
 	resources :sessions, :only => [:new, :create, :destroy]
@@ -26,6 +31,7 @@ AxiosApp::Application.routes.draw do
   match '/help',    	:to => 'pages#help'
   match '/contacts',	:to => 'pages#contacts'	
   match '/resources', :to => 'pages#resources'
+  match '/projects',  :to => 'pages#projects'
 
   root :to => 'pages#home'  
   
