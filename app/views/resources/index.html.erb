@@ -1,0 +1,41 @@
+<h1>Listing resources</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Title</th>
+    <th>Home addr</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th>Hired date</th>
+    <th>Base rate</th>
+    <th>Resume</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @resources.each do |resource| %>
+  <tr>
+    <td><%= resource.name %></td>
+    <td><%= resource.email %></td>
+    <td><%= resource.title %></td>
+    <td><%= resource.home_addr %></td>
+    <td><%= resource.city %></td>
+    <td><%= resource.state %></td>
+    <td><%= resource.zip %></td>
+    <td><%= resource.hired_date %></td>
+    <td><%= resource.base_rate %></td>
+    <td><%= resource.resume %></td>
+    <td><%= link_to 'Show', resource %></td>
+    <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
+    <td><%= link_to 'Destroy', resource, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Resource', new_resource_path %>

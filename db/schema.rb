@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120301183342) do
+ActiveRecord::Schema.define(:version => 20120315132917) do
 
   create_table "contacts", :force => true do |t|
     t.string   "first_name"
@@ -51,6 +51,21 @@ ActiveRecord::Schema.define(:version => 20120301183342) do
   add_index "relationships", ["followed_id"], :name => "index_relationships_on_followed_id"
   add_index "relationships", ["follower_id", "followed_id"], :name => "index_relationships_on_follower_id_and_followed_id", :unique => true
   add_index "relationships", ["follower_id"], :name => "index_relationships_on_follower_id"
+
+  create_table "resources", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "title"
+    t.string   "home_addr"
+    t.string   "city"
+    t.string   "state"
+    t.integer  "zip"
+    t.date     "hired_date"
+    t.decimal  "base_rate"
+    t.text     "resume"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"

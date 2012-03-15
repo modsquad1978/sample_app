@@ -1,11 +1,12 @@
-.container {
-	width: 710px;
-	margin-left: auto;
-	margin-right: auto;
+* { padding:0; margin:0; outline:0; }
 }
 	
 body {
-	background: #cff;
+	background:#fff;
+	font-family: Arial, sans-serif;
+	font-size:12px;
+	line-height:18px;
+	color:#6d6d6d;
 }
 
 header {
@@ -13,8 +14,8 @@ header {
 }
 
 header img {
-	padding: 1em;
-	background: none;
+	height:74px; 
+	background:url(images/header.gif)
 }
 
 section {

@@ -1,5 +1,7 @@
 AxiosApp::Application.routes.draw do
 	
+  resources :resources
+
 	resources :users do
 		member do
 			get :following, :followers
@@ -8,7 +10,7 @@ AxiosApp::Application.routes.draw do
 	
   get "sessions/new"
 	get "contacts/new"
-	
+	get "resources/new"
 
   resources :users
 	resources :sessions, :only => [:new, :create, :destroy]
@@ -23,6 +25,7 @@ AxiosApp::Application.routes.draw do
   match '/about',   	:to => 'pages#about'
   match '/help',    	:to => 'pages#help'
   match '/contacts',	:to => 'pages#contacts'	
+  match '/resources', :to => 'pages#resources'
 
   root :to => 'pages#home'  
   
